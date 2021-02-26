@@ -1,0 +1,38 @@
+[
+  {
+    "text": "look at room",
+    "entities": [
+      {
+        "start": 8,
+        "end": 12,
+        "value": "room",
+        "entity": "object"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "look around the room",
+    "entities": [
+      {
+        "start": 16,
+        "end": 20,
+        "value": "room",
+        "entity": "object"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "take the room",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "room",
+        "entity": "object"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

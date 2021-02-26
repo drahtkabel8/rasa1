@@ -1,0 +1,61 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- look
+- pickup
+- greet
+- use
+- start
+- help
+- surroundings
+- continue
+- name
+- goodbye
+- inventory
+- hint
+- violence
+entities:
+- object
+slots:
+  key:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+  poster:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+  name:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+  curtains:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! Welcome to the breakoutbot adventure! You are communicating with someone in a different location. Interact with them to find out what your objective is. You can try to get them to interact with items around them. Certain items can be combined. Everything is text based. For hints, try asking questions about their surroundings and/or whatever you want them to interact with. Start the game by typing 'start'. You can also ask for 'help' if you've never played these sorts of games before. Good luck!
+  utter_help:
+  - text: This is a text based adventure game. You can motivate the person you are in correspondence with to `pick up` items and/or `combine` them in order to solve puzzles. You can try to make them `look at` items and they might be able to  `use` items on other objects. Before you're able to combine items you first need to pick them up. If you get stuck, feel free to ask for a 'hint'!
+  utter_hint:
+  - text: Try looking at the window or terminal.
+  utter_start:
+  - text: Hey. You. Yeah, you. I need you to help me. I need to skip town as soon as possible, UNNOTICED. Help me get out of here. I'm in the press center headquarters right now. If any place has information, it's this one. The room I'm in has a window across from the door, a terminal, and   a desk. Where to start?
+  utter_continue:
+  - text: I'm a free journalist - or, well. I was. Now I'm forced to write 'politically correct' articles, and that's not a good thing in a state like this one. If I screw up or stop writing for them, they'll ban me from working entirely. You get why I have to leave. Anyway, We gotta start thinking about how I'm going to get out. Let's start with the room I'm in. It's got a window across from the door, a terminal, and   a desk. Where to start?
+  utter_surroundings:
+  - text: Right now, I can see a window across from the door, a terminal, and a desk.
+  utter_name:
+  - text: Sorry, I forgot to introduce myself. Call me Per.
+actions:
+- action_inventory
+- action_look
+- action_pickup
+- action_use
+- utter_greet
+- utter_help
+- utter_start
+- utter_surroundings

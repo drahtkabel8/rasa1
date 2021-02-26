@@ -1,0 +1,10 @@
+[
+  {
+    "text": "look around",
+    "intent": "surroundings",
+    "intent_prediction": {
+      "name": "look",
+      "confidence": 0.5576625466346741
+    }
+  }
+]
