@@ -1,0 +1,125 @@
+version: "2.0"
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help
+  - action: utter_help
+  - intent: name
+  - action: utter_name
+  - slot_was_set:
+    - name: True
+  - intent: look
+  - action: action_look
+  - intent: pickup
+  - action: action_pickup
+  - slot_was_set:
+    - key: True
+  - intent: pickup
+  - action: action_pickup
+  - slot_was_set:
+    - curtains: True
+  - intent: inventory
+  - action: action_inventory
+  - intent: use
+  - action: action_use
+- story: hint hint path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help
+  - action: utter_help
+  - intent: hint
+  - action: utter_hint
+  - intent: look
+  - action: action_look
+- story: also happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: name
+  - action: utter_name
+  - slot_was_set:
+    - name: True
+  - intent: inventory
+  - action: action_inventory
+  - intent: look
+  - action: action_look
+  - intent: pickup
+  - action: action_pickup
+  - slot_was_set:
+    - curtains: True
+  - intent: inventory
+  - action: action_inventory
+  - intent: pickup
+  - action: action_pickup
+  - slot_was_set:
+    - key: True
+  - intent: inventory
+  - action: action_inventory
+  - intent: look
+  - action: action_look
+  - intent: use
+  - action: action_use
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help
+  - action: utter_help
+  - intent: start
+  - action: utter_start
+  - intent: surroundings
+  - action: utter_surroundings
+  - intent: look
+    entities:
+    - object: window
+  - action: action_look
+  - intent: pickup
+    entities:
+    - object: curtains
+  - slot_was_set:
+    - curtains: True
+  - action: action_inventory
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: start
+  - action: utter_start
+  - intent: look
+    entities:
+    - object: window
+  - action: action_look
+  - intent: pickup
+    entities:
+    - object: curtains
+  - slot_was_set:
+    - curtains: True
+  - action: action_inventory
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: start
+  - action: utter_start
+  - intent: look
+    entities:
+    - object: window
+  - action: action_look
+  - intent: pickup
+    entities:
+    - object: curtains
+  - slot_was_set:
+    - curtains: True
+  - action: action_inventory
+  - intent: use
+    entities:
+    - object: curtains
+    - object: window
+  - action: action_use

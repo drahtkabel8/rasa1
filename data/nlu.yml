@@ -1,0 +1,146 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - heya
+    - howdy
+    - Hello
+    - hello there
+- intent: start
+  examples: |
+    - start
+    - begin
+    - start game
+- intent: name
+  examples: |
+    - what's your name?
+    - who are you?
+    - what should I call you?
+    - who am I talking to?
+    - who is this?
+- intent: continue
+  examples: |
+    - Help you?
+    - Help you with what?
+    - What should I help you with?
+    - How can I help you?
+    - How?
+    - How can I help?
+- intent: look
+  examples: |
+    - look at [room](object)
+    - i want to look at the [window](object)
+    - check the [terminal](object)
+    - peek at [key](object)
+    - watch the [curtains](object)
+    - glance at the [door](object)
+    - look at the [terminal](object)
+    - look around
+    - look into the [terminal](object)
+    - look at cardboard [terminal](object)
+    - Can I look at the [window](object)?
+    - inspect the [window](object)
+    - look around the [room](object)
+    - look at the [drawer](object)
+    - look at the [window](object)
+    - walk to the [window](object)
+    - go to the [door](object)
+    - look at the [key](object)
+    - look at the [door](object)
+    - throw the [terminal](object) at the [window](object)
+    - look at the [window](object)
+- intent: violence
+  examples: |
+    - punch the [window](object)
+    - break the [window](object)
+    - destroy the [door](object)
+    - kick down the [door](object)
+    - smash the [window](object)
+- intent: use
+  examples: |
+    - open the [terminal](object)
+    - lets open the [terminal](object)
+    - combine the [key](object) with the [terminal](object)
+    - use the [window](object) on the [key](object)
+    - use the [key](object) with the [terminal](object)
+    - use [curtains](object) on [terminal](object)
+    - use [key](object) on [door](object)
+    - unite the [curtains](object) with the [terminal](object)
+    - use the [key](object) on the [window](object)
+    - use the [window](object)
+    - open the [window](object)
+    - combine the [curtains](object) with the [key](object)
+    - combine the [window](object) with the [door](object)
+    - use the [key](object) on the [door](object)
+    - [key](object) to the [door](object)?
+    - combine the [key](object) with the [window](object)
+    - use [curtains](object) to climb out of the [window](object)
+- intent: pickup
+  examples: |
+    - take the [room](object)
+    - snag the [window](object)
+    - grab the [terminal](object)
+    - seize the [key](object)
+    - take the [door](object)
+    - pick up the [curtains](object)
+    - pick up the [key](object)
+    - take the [curtains](object)
+    - pick up [curtains](object)
+- intent: inventory
+  examples: |
+    - What items are you carrying
+    - what is in your inventory
+    - what items to you currently have
+    - what have you picked up so far
+    - check inventory
+    - how many items do you have
+    - look at the inventory
+    - Where do I find my inventory?
+    - show me inventory
+- intent: help
+  examples: |
+    - help
+    - how does this game work
+    - what commands can i use
+    - how does this work?
+    - please help me
+    - i do not understand this
+    - what can i do?
+    - where am i
+    - i don't get this
+- intent: hint
+  examples: |
+    - can i get a hint?
+    - hint please
+    - I'm stuck
+    - what should I do?
+    - give me a hint
+- intent: goodbye
+  examples: |
+    - Bye
+    - Ciao
+    - goodbye
+    - end game
+- intent: surroundings
+  examples: |
+    - look around
+    - what can you see?
+    - what can you see right now?
+    - what's around you?
+    - what's in the room?
+    - what do you see?
+- lookup: object
+  examples: |
+    - terminal
+    - door
+    - window
+    - curtains
+    - printer
+    - key
+    - drawer
